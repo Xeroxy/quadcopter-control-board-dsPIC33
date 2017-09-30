@@ -1,5 +1,5 @@
 defmplabxtrace.log
 defmplabxtrace.log.inx
-/dist
-/build
-/nbproject
+dist/
+build/
+nbproject/
