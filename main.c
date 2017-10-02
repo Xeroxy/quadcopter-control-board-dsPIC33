@@ -10,7 +10,7 @@
 int error=1;
 
  int main(void) {
-     ADPCFG = 0xFFFF;				//make ADC pins all digital ??
+     ADPCFG = 0xFFFF;				//make ADC pins all digital
      setupOsc();
      setupUART(57600);
      printf("\n------------------------------------------------------------------------------------\n************************    dsPIC Quadcopter Controller    ************************\n------------------------------------------------------------------------------------");
