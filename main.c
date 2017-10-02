@@ -18,9 +18,12 @@ int error=1;
      setupI2C(400000);
           MPU9150TestI2C();
      do{
-     setupIMU();
-     error=MPU9150CheckRegisters();
+      
+      setupIMU();
+      error=MPU9150CheckRegisters();
+     
      }while(error!=0);
+     
      setupPWM();
      setupLeds();
      setLedsHigh();
@@ -29,28 +32,22 @@ int error=1;
      setupTimer2(); //Input capture timer
      setupTimer3(); //PWM timer
 
-     //calibrateGyros();
-     //calibrateAccel();
-    // calibrateMag();
+     calibrateGyros();
+     calibrateAccel();
+     calibrateMag();
      
      setupPID();
 
      setupIC();
      setupTimer4(); //RX timeout timer
-
-
-     //calibrateESCEndpoints();
+  
+     calibrateESCEndpoints();
 
      IEC0bits.T1IE = 1;
      
 
     while(1){
-     }
-
-
-
-
-
-
+    
+    }
     return (EXIT_SUCCESS);
 }
